@@ -24,6 +24,11 @@ sql/
 03_fact_sales.sql
 README.md
 
+## 🗂 ERD (Entity Relationship Diagram)
+
+![ERD Diagram](erd-diagram.png)
+*This schema shows how **Customers**, **Orders**, and **Products** connect into the `fact_sales` table, which powers revenue, order, and customer analytics for the dashboard.*
+
 
 ---
 
