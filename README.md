@@ -76,7 +76,7 @@ sales-marketing-dashboard/
     03_fact_sales.sql
   README.md
 ```
-![Dashboard Screenshot](dashboard.png)
+![Dashboard Screenshot](dashboard-sample.png)
 
 
 ## Notes
