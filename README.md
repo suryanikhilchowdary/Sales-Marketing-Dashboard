@@ -1,65 +1,32 @@
-# Sales & Marketing Dashboard
+# Sales & Marketing Dashboard (Starter Template)
 
-A lightweight starter project for building a **Sales & Marketing Analytics Dashboard**.  
-Includes sample CSVs, SQL scripts, and KPI definitions (Revenue, Orders, AOV, Customer Segmentation).  
+A lightweight starter for building a **Sales & Marketing** analytics stack: simple CSVs → SQL transforms → dashboard.
 
----
+## Flow
+1. Load CSVs into your DB (MySQL/Postgres/BigQuery/Snowflake).
+2. Run `sql/01_create_schema.sql` then `sql/02_clean_dim_customers.sql` and `sql/03_fact_sales.sql`.
+3. Connect Tableau / Power BI to `analytics.fact_sales` and build visuals (Revenue, AOV, Conversion, CAC proxy).
 
-## Tech Stack
-- SQL (MySQL / PostgreSQL / Snowflake)
-- Tableau / Power BI / Excel
-- Python (optional, for ETL scripting)
-
----
-
-## 📂 Project Structure
-sales-marketing-dashboard/
-data/
-customers.csv
-products.csv
-orders.csv
-sql/
-01_create_schema.sql
-02_clean_dim_customers.sql
-03_fact_sales.sql
-README.md
-
-## 🗂 ERD (Entity Relationship Diagram)
-
-![ERD Diagram](erd-diagram.png)
-*This schema shows how **Customers**, **Orders**, and **Products** connect into the `fact_sales` table, which powers revenue, order, and customer analytics for the dashboard.*
-
-
----
-
-##  KPIs
+## KPIs
 - **Revenue** (daily/weekly/monthly)
-- **Orders** & **Average Order Value (AOV)**
+- **Orders** & **AOV** (avg order value)
 - **New vs Returning Customers**
-- **Simple Funnel:** sessions → orders (if web data is added later)
+- **Simple Funnel**: sessions → orders (if you load web sessions later)
 
----
+## Repo Structure
+```
+sales-marketing-dashboard/
+  data/
+    customers.csv
+    products.csv
+    orders.csv
+  sql/
+    01_create_schema.sql
+    02_clean_dim_customers.sql
+    03_fact_sales.sql
+  README.md
+```
 
-##  How to Use
-1. Load the sample CSVs into your database.
-2. Run the SQL scripts in order:
-   - `01_create_schema.sql`
-   - `02_clean_dim_customers.sql`
-   - `03_fact_sales.sql`
-3. Connect Tableau or Power BI to the `analytics.fact_sales` table.
-4. Build dashboards for Revenue, AOV, and Customer Segmentation.
-
----
-
-## 📊 Example Dashboard
-Here’s a sample visualization :
-
-![Dashboard Screenshot](dashboard-sample.png)
-)
-
----
-
-##  Next Steps
-- Replace sample data with real sales/marketing data.
-- Add marketing spend + CAC metrics.
-- Extend with customer segmentation & retention analysis.
+## Notes
+- The CSVs are tiny sample data to test your pipeline.
+- Replace with your real data when ready.
