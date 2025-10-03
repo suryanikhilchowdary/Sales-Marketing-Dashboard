@@ -49,7 +49,7 @@ README.md
 ## 📊 Example Dashboard
 Here’s a sample visualization :
 
-![Dashboard Screenshot](<img width="1600" height="1000" alt="dashboard-sample" src="https://github.com/user-attachments/assets/72070348-f2d0-4cb8-be65-e980c2a19010" />
+![Dashboard Screenshot](dashboard-sample.png)
 )
 
 ---
